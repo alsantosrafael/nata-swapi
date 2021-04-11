@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
   a{
 	  text-decoration: none;
-	  color: black;
+	  color: #FFF;
 	  :hover {
 		  color: #182c3e;
 		  transition: 400ms;
@@ -28,6 +28,9 @@ const GlobalStyle = createGlobalStyle`
   }
   button{
 	  outline: none;
+  }
+  h2{
+	  color: #FFF;
   }
 
 
