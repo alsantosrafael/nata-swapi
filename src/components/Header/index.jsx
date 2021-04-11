@@ -3,7 +3,6 @@ import { LogoContainer, HeaderComponent } from './styles';
 import Search from '../Search';
 import Menu from '../Menu';
 const Header = () => {
-  console.log();
   return (
     <HeaderComponent>
       <LogoContainer>
