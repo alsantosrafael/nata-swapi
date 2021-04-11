@@ -1,3 +1,3 @@
 module.exports = {
-  '*.{js, jsx}': ["eslint 'src/**' --fix", 'git add']
+  '*.{js, jsx}': ['yarn prettier-format ', 'yarn lint', 'git add']
 };
