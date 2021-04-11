@@ -22,7 +22,7 @@ Table of contents
 Status do projeto
 ---
 <h4> 
-	SWAPI Nata Challenge is completed! ✔️🚀
+	SWAPI Nata Challenge is complete! ✔️🚀
 </h4> <br>
 
 Usage
