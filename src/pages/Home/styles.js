@@ -60,3 +60,17 @@ export const ActionButton = styled.button`
     transition: 400ms;
   }
 `;
+
+export const Organizer = styled.article`
+  display: flex;
+  width: 615px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 3rem;
+  margin-bottom: 8px;
+  background-color: #182c3e;
+  padding: 8px 16px;
+  filter: opacity(0.8);
+  border-radius: 8px;
+`;

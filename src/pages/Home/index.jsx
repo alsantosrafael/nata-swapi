@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-escape */
-import { useContext } from 'react';
+import { useContext, useCallBack, useEffect } from 'react';
 import Header from '../../components/Header';
-import { Wrapper, CardsSection, Card, ActionButton } from './styles';
+import { Wrapper, CardsSection, Card, ActionButton, Organizer } from './styles';
 import { MainContainer } from '../../styles/global';
 import { GlobalContext } from '../../GlobalContext';
 import calculateStops from '../../services/calculateStops';
@@ -14,26 +15,14 @@ export default function Home() {
     starShips,
     setStarships,
     busca,
-    setShowModal
-    // currentPage,
-    // setCurrentPage
+    setShowModal,
+    currentPage,
+    setCurrentPage
   } = useContext(GlobalContext);
 
   //   const handleNext = useCallBack(async () => {
-  //     setCurrentPage(setCurrentPage + 1);
-  //     try {
-  //       const { data } = await api.get(`/starships?page=${currentPage}`);
-  //       setStarships(data.results);
-  //     } catch (err) {
-  //       alert('Problem with api.');
-  //       setBusca(null);
-  //       setStarships(undefined);
-  //     }
-  //   }, []);
-
-  //   const handlePrevious = useCallBack(async () => {
-  //     if (currentPage > 1) {
-  //       setCurrentPage(setCurrentPage - 1);
+  //     if (starShips?.totalPages > currentPage) {
+  //       setCurrentPage(currentPage + 1);
   //       try {
   //         const { data } = await api.get(`/starships?page=${currentPage}`);
   //         setStarships(data.results);
@@ -43,7 +32,21 @@ export default function Home() {
   //         setStarships(undefined);
   //       }
   //     }
-  //   }, []);
+  //   }, [starShips, currentPage]);
+
+  //   const handlePrevious = useCallBack(async () => {
+  //     // if (currentPage > 1) {
+  //     setCurrentPage(currentPage - 1);
+  //     try {
+  //       const { data } = await api.get(`/starships?page=${currentPage}`);
+  //       setStarships(data.results);
+  //     } catch (err) {
+  //       alert('Problem with api.');
+  //       setBusca(null);
+  //       setStarships(undefined);
+  //     }
+  //     // }
+  //   }, [starShips, currentPage]);
 
   //   useEffect(() => {
   //     handleNext();
@@ -62,22 +65,11 @@ export default function Home() {
         <MainContainer>
           {starShips && (
             <article>
-              <div
-                style={{
-                  display: 'flex',
-                  width: '615px',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  margin: '0 auto',
-                  marginLeft: '3rem',
-                  marginBottom: '8px',
-                  backgroundColor: '#182c3e',
-                  padding: '8px 16px',
-                  filter: 'opacity(0.8)',
-                  borderRadius: '8px'
-                }}
-              >
-                <ActionButton /*{ onClick={() => handlePrevious} }*/>
+              <Organizer>
+                <ActionButton
+                  disabled={starShips.currentPage === 1}
+                  //   onClick={() => handlePrevious}
+                >
                   Anterior
                 </ActionButton>
                 <ActionButton
@@ -88,10 +80,13 @@ export default function Home() {
                 >
                   Limpar
                 </ActionButton>
-                <ActionButton /*{ onClick={() => handleNext} }*/>
+                <ActionButton
+                  disabled={starShips.totalPages === currentPage}
+                  //   onClick={() => handleNext}
+                >
                   Próximo
                 </ActionButton>
-              </div>
+              </Organizer>
               <CardsSection>
                 {starShips.map(item => (
                   <Card key={item.name} onClick={() => setShowModal(item)}>
