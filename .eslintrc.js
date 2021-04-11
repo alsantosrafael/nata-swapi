@@ -21,7 +21,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended',
+    // 'plugin:prettier/recommended',
     'plugin:sonarjs/recommended',
     'plugin:security/recommended',
     'plugin:react-hooks/recommended'
