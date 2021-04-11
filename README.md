@@ -7,7 +7,7 @@ SWAPI - Challenge
 
 Introduction
 ---
-<p align="center">This project consisted of the development of a Frontend application made with React. The API which served this application is the SWAPI. It can be found  <a href="https://swapi.dev/">here</a>.<p>
+<p align="center">The main goal of this project consisted of developing a Frontend application built with React. The API which served this application is the SWAPI and can be found <a href="https://swapi.dev/">here</a>.<p>
 
 
 Table of contents
