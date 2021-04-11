@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+<p align="center">
+   <img src="https://cdn-content.talentbrand.com.br/companies/329/w512h140/41b3b5128d7ce2e91f31e5be99dda3d3b90c0cfc.png?1575473585" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SWAPI - Challenge
+================= 
 
-## Available Scripts
+Introduction
+---
+<p align="center">This project consisted of the development of a Frontend application made with React. The API which served this application is the SWAPI. It can be found  <a href="https://swapi.dev/">here</a>.<p>
 
-In the project directory, you can run:
 
-### `yarn start`
+Table of contents
+---
+<p align="center">
+ <a href="#usage">Usage</a> •
+ <a href="#techs">Technologies and Libraries</a> •
+ <a href="#overview">Overview</a> •
+ <a href="#autor">Author</a> •
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Status do projeto
+---
+<h4> 
+	SWAPI Nata Challenge is completed! ✔️🚀
+</h4> <br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Usage
+---
+1. Clone the repository of the following link https://github.com/alsantosrafael/nata-swapi.git ;
+2. Open it with VSCode.
+3. Execute the comman ```yarn``` so you can install all dependencies this project uses.
+6. At last, execute ```yarn start```.
+7. Enjoy.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Technologies and Libraries
+---
+<ul>
+  <li>JavaScript</li>
+  <li>ReactJS</li>
+    <ul>
+    <li><a href="https://www.npmjs.com/package/eslint" target="_blank">Eslint</a></li>
+    <li><a href="https://www.npmjs.com/package/prettier" target="_blank">Prettier</a></li>
+    <li><a href="https://styled-components.com/" target="_blank">Styled-components</a></li>
+    <li><a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a></li>
+    <li><a href="https://react-hook-form.com/" target="_blank">React Hook Form</a></li>
+      
+      
+    </ul>
+</ul>
 
-### `yarn build`
+Overview
+---
+1. In the root of the folter all config files and essential files to make ReactJS work are found.
+2. In the source folder (src)  you can find the core of our applications, separated by responsability.
+3. Assets folder is responsible for housing images, gifs, etc...
+4. Hooks folder contains the custom hooks I have used in the application.
+5. Components contains all re-usable React components.
+6. Pages contains the pages that will render.
+7. Routes contains all the routes this application uses.
+8. Services is the folder responsible for gathering all useful functions that can be used throughout the whole application.
+9. Styles gathers all the global styles used by the application.
+10. GlobalContext is the file responsible for gathering all the states used in the application. It was built following the best practices and functionalities of the React Context API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Autor
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a href="https://github.com/alsantosrafael/">
+ <img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/60659321?s=460&u=f7b85d61e01a491287fce14c7e9bc0ee74475cc8&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Rafael Almeida</b></sub></a> <a href="https://github.com/alsantosrafael" title="Github">🚀</a>
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Feito com ❤️ por Rafael Almeida 👋🏽 Entre em contato!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ [![Linkedin Badge](https://img.shields.io/badge/-Rafael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rafaalms/)](https://www.linkedin.com/in/rafaalms/) 
+[![Gmail Badge](https://img.shields.io/badge/-rafael.profeng@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:rafael.profeng@gmail.com)](mailto:rafael.profeng@gmail.com)
