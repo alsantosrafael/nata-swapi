@@ -1,8 +1,6 @@
 import { Nav } from './styles';
 import { NavLink } from 'react-router-dom';
 
-// import { IoIosHome, IoIosRocket } from 'react-icons/io';
-
 const routes = [
   {
     label: 'Home',
