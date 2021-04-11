@@ -31,8 +31,8 @@ Usage
 2. Open it with VSCode.
 3. Execute the comman ```yarn``` so you can install all dependencies this project uses.
 4. At last, execute ```yarn start```.
-***5. To access the results, you must enter one number where it reads "Insert the distance in MGLT"***
-8. Enjoy.
+**5. To access the results, you must enter one number where it reads "Insert the distance in MGLT"**
+6. Enjoy.
 
 
 Technologies and Libraries
