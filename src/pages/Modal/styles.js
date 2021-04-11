@@ -11,27 +11,37 @@ export const ModalContainer = styled.div`
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.6);
   overflow-y: hidden;
-  height: 100vh;
 `;
 
 export const ModalWrapper = styled.div`
   position: relative;
-  width: 339px;
-  /* height: 342px; */
+  width: 340px;
   padding: 8px 16px;
-  background-color: #fff;
-  box-shadow: 0px 3px 6px #00000029;
+  background-color: #374952;
   z-index: 10;
-  border-radius: 5px;
+  border-radius: 16px;
   overflow-y: hidden;
+  border: 2px solid #263238;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
 
   @media (min-width: 1100px) {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 800px;
-    min-height: 455px;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    width: 300px;
+    min-height: 450px;
     z-index: 3;
-    /* max-height: 500px; */
+    padding: 1rem 2rem;
+  }
+
+  h3 {
+    color: #5197b5;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 4px;
+    color: #f7f7f7;
   }
 `;
