@@ -2,7 +2,7 @@
   "name": "nata-swapi",
   "version": "0.1.0",
   "engines": {
-    "node": "15.11.0"
+    "node": "14.16.1"
   },
   "private": true,
   "dependencies": {
