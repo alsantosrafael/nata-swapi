@@ -9,19 +9,29 @@ function calculateStops(mglt, consumables, distance) {
     year: 24 * 30 * 12,
     years: 24 * 30 * 12
   };
+
   const divConsumables = consumables.split(' ');
   const consumablesInHours = table[divConsumables[1]];
+
+  if (isNaN(mglt)) {
+    return 'MGLT not informed.';
+  }
 
   if (consumablesInHours) {
     const totalConsumablesInHours =
       Number(divConsumables[0]) * Number(consumablesInHours);
-    console.log(totalConsumablesInHours);
-    const hoursToCompleteJourney = distance / Number(mglt);
-    console.log(hoursToCompleteJourney);
 
-    return Math.floor(hoursToCompleteJourney / totalConsumablesInHours);
+    const hoursToCompleteJourney = distance / Number(mglt);
+
+    const stops = Math.floor(hoursToCompleteJourney / totalConsumablesInHours);
+
+    if (stops > 1000000000000) {
+      return ' Over 1000000000000 stops';
+    }
+
+    return stops;
   }
-  return false;
+  return 'Not enough info informed.';
 }
 
 export default calculateStops;
