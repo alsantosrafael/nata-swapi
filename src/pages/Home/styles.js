@@ -30,6 +30,7 @@ export const ActionButton = styled.button`
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  color: #fff;
   :hover {
     filter: opacity(0.9);
     transition: 400ms;

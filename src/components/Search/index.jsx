@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useContext, useCallback } from 'react';
 import { SearchInput, Form } from './styles';
 import { BsSearch } from 'react-icons/bs';
-// import { GlobalContext } from '../../GlobalContext';
+import { GlobalContext } from '../../GlobalContext';
 import { useForm } from 'react-hook-form';
+// import * as yup from 'yup';
 
 import api from '../../services/api';
 
 const Search = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = async lala => {
-    const { data } = await api.get('/starships');
+  const { setBusca, setStarships } = useContext(GlobalContext);
+  //   const schema = yup.object().shape({
+  //     search: yup.number().required()
+  //   });
 
-    console.log(data);
-    console.log(lala);
-  };
+  const onSubmit = useCallback(
+    async info => {
+      try {
+        const { data } = await api.get('/starships');
+        setStarships(data.results);
+        setBusca(info.search);
+      } catch (err) {
+        console.log(err);
+        setBusca(null);
+        setStarships(undefined);
+      }
+    },
+    [setBusca, setStarships]
+  );
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>

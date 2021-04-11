@@ -21,7 +21,7 @@ export const Nav = styled.nav`
         /* background-color: #3e6db6; */
         /* border-radius: 8px; */
         transition: color 800ms ease-in-out;
-        color: #9b3246;
+        color: #db7093;
       }
     }
   }
