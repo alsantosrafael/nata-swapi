@@ -14,8 +14,6 @@ const Modal = () => {
     return null;
   }
 
-  console.log(showModal);
-
   return ReactDom.createPortal(
     <>
       <ModalContainer>
