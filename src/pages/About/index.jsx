@@ -1,8 +1,8 @@
 import { MainContainer } from '../../styles/global';
 import Header from '../../components/Header';
 import { Container, Portrait, Anchor } from './styles';
-import linkedinIcon from '../../local_assets/linkedin.png';
-import githubIcon from '../../local_assets/github.png';
+import linkedinIcon from '../../assets/linkedin.png';
+import githubIcon from '../../assets/github.png';
 const About = () => {
   return (
     <div>

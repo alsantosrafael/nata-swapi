@@ -5,6 +5,7 @@ export const GlobalContext = createContext();
 export const GlobalStorage = ({ children }) => {
   const [busca, setBusca] = useState(null);
   const [starShips, setStarships] = useState(undefined);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <GlobalContext.Provider
@@ -12,7 +13,9 @@ export const GlobalStorage = ({ children }) => {
         busca,
         setBusca,
         starShips,
-        setStarships
+        setStarships,
+        showModal,
+        setShowModal
       }}
     >
       {children}

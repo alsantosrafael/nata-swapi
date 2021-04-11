@@ -5,7 +5,7 @@ import { GlobalContext } from '../../GlobalContext';
 import { useForm } from 'react-hook-form';
 // import * as yup from 'yup';
 
-import api from '../../services/api';
+// import api from '../../services/api';
 
 const Search = () => {
   const { register, handleSubmit } = useForm();
@@ -17,7 +17,14 @@ const Search = () => {
   const onSubmit = useCallback(
     async info => {
       try {
-        const { data } = await api.get('/starships');
+        //   const { data } = await api.get('/starships');
+        const data = {
+          results: [
+            { name: 'Millenium Falcon', consumables: '2 months', MGLT: 75 },
+            { name: 'X - Wing', consumables: '3 days', MGLT: 15 }
+          ]
+        };
+        console.log(data);
         setStarships(data.results);
         setBusca(info.search);
       } catch (err) {
