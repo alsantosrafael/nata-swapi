@@ -47,7 +47,6 @@ Technologies and Libraries
     <li><a href="https://react-hook-form.com/" target="_blank">React Hook Form</a></li>
       
       
-    </ul>
 </ul>
 
 Overview
