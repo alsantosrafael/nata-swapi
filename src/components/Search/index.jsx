@@ -15,7 +15,7 @@ const Search = () => {
   //   });
 
   const onSubmit = useCallback(
-    async info => {
+    async (info, e) => {
       try {
         //   const { data } = await api.get('/starships');
         const data = {
@@ -24,9 +24,10 @@ const Search = () => {
             { name: 'X - Wing', consumables: '3 days', MGLT: 15 }
           ]
         };
-        console.log(data);
+        // console.log(data);
         setStarships(data.results);
         setBusca(info.search);
+        e.target.reset();
       } catch (err) {
         console.log(err);
         setBusca(null);
@@ -41,6 +42,7 @@ const Search = () => {
       {/* <Label>Time to fly..</Label> */}
       <SearchInput
         {...register('search')}
+        type="number"
         placeholder="Insert the distance in ML"
       />
       <button type="submit" style={{ outline: 'none' }}>
