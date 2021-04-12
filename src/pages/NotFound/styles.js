@@ -38,6 +38,7 @@ export const NotFoundCard = styled.div`
     border-radius: 8px;
     cursor: pointer;
     color: #fff;
+    border: 2px solid #000000;
 
     :hover {
       filter: opacity(0.6);
