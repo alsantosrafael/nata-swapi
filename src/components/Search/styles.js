@@ -9,26 +9,21 @@ export const SearchInput = styled.input`
   :focus {
     border: gray;
   }
-`;
 
-export const Label = styled.label`
-  background-color: transparent;
-  color: #f8e71b;
-  font-size: 3rem;
+  @media (max-width: 900px) {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export const Form = styled.form`
   width: 400px;
-`;
 
-export const Button = styled.button`
-  height: 42px;
-  width: 20%;
-  border-radius: 8px;
-
-  img {
+  @media (max-width: 900px) {
     width: 100%;
-    height: 100%;
+    margin: 0 auto;
+    max-width: 300px;
   }
 `;
 

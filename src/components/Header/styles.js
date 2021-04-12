@@ -15,9 +15,11 @@ export const HeaderComponent = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  /* background-color: #092532; */
   background-color: transparent;
-  /* border-bottom: 2px solid #333; */
 
-  // #182c3e
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;

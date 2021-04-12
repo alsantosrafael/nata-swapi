@@ -2,7 +2,14 @@
 /* eslint-disable no-useless-escape */
 import { useContext, useCallBack, useEffect } from 'react';
 import Header from '../../components/Header';
-import { Wrapper, CardsSection, Card, ActionButton, Organizer } from './styles';
+import {
+  Wrapper,
+  CardsSection,
+  Card,
+  ActionButton,
+  Organizer,
+  Article
+} from './styles';
 import { MainContainer } from '../../styles/global';
 import { GlobalContext } from '../../GlobalContext';
 import calculateStops from '../../services/calculateStops';
@@ -64,7 +71,7 @@ export default function Home() {
         <Header />
         <MainContainer>
           {starShips && (
-            <article>
+            <Article>
               <Organizer>
                 <ActionButton
                   disabled={starShips.currentPage === 1}
@@ -104,7 +111,7 @@ export default function Home() {
                   </Card>
                 ))}
               </CardsSection>
-            </article>
+            </Article>
           )}
         </MainContainer>
       </Wrapper>

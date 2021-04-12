@@ -5,12 +5,15 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 32px; */
   width: 280px;
   height: 500px;
   border: 1px solid white;
   margin-left: 2.5rem;
   padding: 1rem 1.5rem;
+
+  @media (max-width: 900px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Portrait = styled.div`

@@ -24,5 +24,8 @@ export const Nav = styled.nav`
         color: #db7093;
       }
     }
+    @media (max-width: 900px) {
+      margin: 16px;
+    }
   }
 `;

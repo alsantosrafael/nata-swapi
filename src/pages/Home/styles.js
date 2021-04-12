@@ -13,12 +13,20 @@ export const CardsSection = styled.section`
   gap: 12px;
   max-width: 900px;
   height: 500px;
-  /* border: 1px solid #263238; */
   border-radius: 16px;
   margin-left: 2.5rem;
   padding: 1rem 1.5rem;
   box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
   transition: all 400ms ease-in-out;
+
+  @media (max-width: 900px) {
+    margin-top: 32px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 8px;
+    overflow-y: scroll;
+  }
 `;
 
 export const Card = styled.div`
@@ -47,6 +55,11 @@ export const Card = styled.div`
     margin-top: 4px;
     color: #f7f7f7;
   }
+
+  @media (max-width: 900px) {
+    width: 160px;
+    height: 160px;
+  }
 `;
 
 export const ActionButton = styled.button`
@@ -61,7 +74,7 @@ export const ActionButton = styled.button`
   }
 `;
 
-export const Organizer = styled.article`
+export const Organizer = styled.div`
   display: flex;
   width: 615px;
   justify-content: space-between;
@@ -73,4 +86,17 @@ export const Organizer = styled.article`
   padding: 8px 16px;
   filter: opacity(0.8);
   border-radius: 8px;
+
+  @media (max-width: 900px) {
+    margin: 0 auto;
+    max-width: 320px;
+    margin-top: 32px;
+  }
+`;
+
+export const Article = styled.article`
+  @media (max-width: 900px) {
+    margin: 0 auto;
+    margin-top: 50%;
+  }
 `;

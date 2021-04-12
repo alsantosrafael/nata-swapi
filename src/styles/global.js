@@ -13,6 +13,9 @@ const GlobalStyle = createGlobalStyle`
 
   body {
 	min-width: 100vh;
+	@media (max-width: 900px){
+		min-width: 100%
+	}
 
   }
   li {
@@ -43,7 +46,6 @@ const GlobalStyle = createGlobalStyle`
 	 -moz-appearance: textfield;
    }
 
-
 `;
 
 export const MainContainer = styled.main`
@@ -54,8 +56,11 @@ export const MainContainer = styled.main`
   background: url(${process.env.PUBLIC_URL + 'assets/darth.jpeg'});
   background-size: cover;
   overflow-y: hidden;
-  @media (max-width: 768px) {
+
+  @media (max-width: 900px) {
     background-size: 100% 100%;
+    width: 100%;
+    object-fit: cover;
   }
 `;
 export default GlobalStyle;
