@@ -19,10 +19,11 @@ Table of contents
  <a href="#autor">Author</a> •
 </p>
 
-Status do projeto
+Project Status
 ---
 <h4> 
 	SWAPI Nata Challenge is complete! ✔️🚀
+	The Website was deployed on Vercel and can be accessed through the following link: https://nata-swapi.vercel.app/
 </h4> <br>
 
 Usage
