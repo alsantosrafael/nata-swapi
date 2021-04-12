@@ -12,7 +12,7 @@ export const CardsSection = styled.section`
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   max-width: 900px;
-  height: 500px;
+  height: 600px;
   border-radius: 16px;
   margin-left: 2.5rem;
   padding: 1rem 1.5rem;
@@ -26,6 +26,7 @@ export const CardsSection = styled.section`
     gap: 6px;
     padding: 8px;
     overflow-y: scroll;
+    height: 400px;
   }
 `;
 
@@ -42,6 +43,8 @@ export const Card = styled.div`
   :hover {
     transform: scale(1.1);
     background-color: #263238;
+  }
+  :last-child {
   }
 
   h3 {
@@ -90,13 +93,12 @@ export const Organizer = styled.div`
   @media (max-width: 900px) {
     margin: 0 auto;
     max-width: 320px;
-    margin-top: 32px;
   }
 `;
 
 export const Article = styled.article`
   @media (max-width: 900px) {
     margin: 0 auto;
-    margin-top: 50%;
+    margin-top: 30%;
   }
 `;

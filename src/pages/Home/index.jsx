@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-escape */
-import { useContext, useCallBack, useEffect } from 'react';
+import { useContext, useCallback, useEffect } from 'react';
 import Header from '../../components/Header';
 import {
   Wrapper,
@@ -14,54 +14,39 @@ import { MainContainer } from '../../styles/global';
 import { GlobalContext } from '../../GlobalContext';
 import calculateStops from '../../services/calculateStops';
 import Modal from '../Modal';
-// import api from '../../services/api';
+import api from '../../services/api';
 export default function Home() {
-  //   const [loading, setLoading] = useState(false);
-  const {
-    setBusca,
-    starShips,
-    setStarships,
-    busca,
-    setShowModal,
-    currentPage,
-    setCurrentPage
-  } = useContext(GlobalContext);
+  const { setBusca, starShips, setStarships, busca, setShowModal } = useContext(
+    GlobalContext
+  );
 
-  //   const handleNext = useCallBack(async () => {
-  //     if (starShips?.totalPages > currentPage) {
-  //       setCurrentPage(currentPage + 1);
-  //       try {
-  //         const { data } = await api.get(`/starships?page=${currentPage}`);
-  //         setStarships(data.results);
-  //       } catch (err) {
-  //         alert('Problem with api.');
-  //         setBusca(null);
-  //         setStarships(undefined);
-  //       }
-  //     }
-  //   }, [starShips, currentPage]);
+  const handleNext = useCallback(async () => {
+    if (starShips?.next) {
+      try {
+        const { data } = await api.get(`${starShips.next}`);
+        setStarships(data);
+      } catch (err) {
+        alert('Problem with api.');
+        setBusca(null);
+        setStarships(undefined);
+      }
+    }
+  }, [setBusca, setStarships, starShips?.next]);
 
-  //   const handlePrevious = useCallBack(async () => {
-  //     // if (currentPage > 1) {
-  //     setCurrentPage(currentPage - 1);
-  //     try {
-  //       const { data } = await api.get(`/starships?page=${currentPage}`);
-  //       setStarships(data.results);
-  //     } catch (err) {
-  //       alert('Problem with api.');
-  //       setBusca(null);
-  //       setStarships(undefined);
-  //     }
-  //     // }
-  //   }, [starShips, currentPage]);
+  const handlePrevious = useCallback(async () => {
+    if (starShips?.previous) {
+      try {
+        const { data } = await api.get(`${starShips.previous}`);
 
-  //   useEffect(() => {
-  //     handleNext();
-  //   }, [handleNext]);
-
-  //   useEffect(() => {
-  //     handlePrevious();
-  //   }, [handlePrevious]);
+        setStarships(data);
+      } catch (err) {
+        alert('Problem with api.');
+        setBusca(null);
+        setStarships(undefined);
+      }
+    }
+    // }
+  }, [setBusca, setStarships, starShips?.previous]);
 
   return (
     <>
@@ -73,12 +58,7 @@ export default function Home() {
           {starShips && (
             <Article>
               <Organizer>
-                <ActionButton
-                  disabled={starShips.currentPage === 1}
-                  //   onClick={() => handlePrevious}
-                >
-                  Anterior
-                </ActionButton>
+                <ActionButton onClick={handlePrevious}>Anterior</ActionButton>
                 <ActionButton
                   onClick={() => {
                     setBusca(null);
@@ -87,15 +67,10 @@ export default function Home() {
                 >
                   Limpar
                 </ActionButton>
-                <ActionButton
-                  disabled={starShips.totalPages === currentPage}
-                  //   onClick={() => handleNext}
-                >
-                  Próximo
-                </ActionButton>
+                <ActionButton onClick={handleNext}>Próximo</ActionButton>
               </Organizer>
               <CardsSection>
-                {starShips.map(item => (
+                {starShips.results.map(item => (
                   <Card key={item.name} onClick={() => setShowModal(item)}>
                     <h3>Name: {item.name}</h3>
                     <p className="stops">

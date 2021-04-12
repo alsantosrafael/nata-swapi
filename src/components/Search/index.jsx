@@ -4,41 +4,27 @@ import { BsSearch } from 'react-icons/bs';
 import { GlobalContext } from '../../GlobalContext';
 import { useForm } from 'react-hook-form';
 
-// import api from '../../services/api';
+import api from '../../services/api';
 
 const Search = () => {
   const { register, handleSubmit } = useForm();
-  const { setBusca, setStarships, setCurrentPage } = useContext(GlobalContext);
+  const { setBusca, setStarships } = useContext(GlobalContext);
 
   const onSubmit = useCallback(
     async (info, e) => {
       try {
-        //   const { data } = await api.get('/starships');
-        const data = {
-          currentPage: 1,
-          totalPages: 2,
-          results: [
-            {
-              name: 'Millenium Falcon',
-              consumables: '2 months',
-              MGLT: 75,
-              page: 1
-            },
-            { name: 'X - Wing', consumables: '3 days', MGLT: 15, page: 2 }
-          ]
-        };
-        setCurrentPage(data.currentPage);
-        setStarships(data.results);
+        const { data } = await api.get('/starships');
+
+        setStarships(data);
         setBusca(info.search);
         e.target.reset();
       } catch (err) {
         alert('Problem with the API detected.');
         setBusca(null);
         setStarships(undefined);
-        setCurrentPage(false);
       }
     },
-    [setBusca, setCurrentPage, setStarships]
+    [setBusca, setStarships]
   );
 
   return (

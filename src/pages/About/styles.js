@@ -11,8 +11,13 @@ export const Container = styled.section`
   margin-left: 2.5rem;
   padding: 1rem 1.5rem;
 
+  h2 {
+    margin-bottom: 16px;
+  }
+
   @media (max-width: 900px) {
     margin: 0 auto;
+    margin-top: 30%;
   }
 `;
 
